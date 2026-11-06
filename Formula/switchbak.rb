@@ -2,14 +2,14 @@
 class Switchbak < Formula
   desc "Carry AI coding agent sessions to switchback"
   homepage "https://switchbak.dev"
-  url "https://github.com/switchbackai/homebrew-tap/releases/download/v0.1.5/switchbak-0.1.5.zip"
-  sha256 "70aa2f44837d45680d154734fe1a5ca8f65f34b262fba6a04e6f80bd06bc1edc"
+  url "https://github.com/switchbackai/homebrew-tap/releases/download/v0.1.6/switchbak-0.1.6.zip"
+  sha256 "825a5cd69bdab9ea7704a918b11284409540c3ed9438b0cc8f9dfd6ec07b1a78"
 
   depends_on arch: :arm64
   depends_on :macos
 
-  # No `service do`: `switchbak setup` writes the launch agents, with the
-  # host and the endpoint that `brew services` does not know.
+  # No `service do`: `switchbak signup` enrols and then writes the launch
+  # agents, with the host and the endpoint that `brew services` does not know.
   def install
     bin.install "bin/switchbak"
     share.install "share/switchbak"
@@ -17,8 +17,10 @@ class Switchbak < Formula
 
   def caveats
     <<~EOS
-      To watch the sessions on this Mac and load the launch agents:
-        switchbak setup
+      To enrol this Mac and start sending its AI coding sessions to switchback:
+        switchbak signup
+      (It asks for your email and the passcode you were given, then sets up the
+      launch agents. `switchbak status` shows when your first session lands.)
       Before `brew uninstall switchbak`, run:
         switchbak teardown
     EOS
