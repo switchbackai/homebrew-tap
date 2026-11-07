@@ -19,19 +19,15 @@ Requirements: macOS on Apple silicon (arm64).
 
 ## Set up
 
-Installing puts the binary on your `PATH` but does not start anything. To watch the agent sessions on this Mac and load the launch agents, run:
-
 ```bash
-switchbak setup
+switchbak signup
 ```
 
-The formula has no `brew services` entry on purpose: `switchbak setup` writes the launch agents itself, with the host and endpoint they need.
-
-Check the installed version with:
-
-```bash
-switchbak version
-```
+It asks for your email and the passcode from your invitation, then writes the
+launch agents. `switchbak status` shows when your first session lands. The
+[user guide](https://docs.switchbak.dev/GUIDE) has every step, and
+[Where your data goes](https://docs.switchbak.dev/DATA-NOTICE) names each place
+a session goes.
 
 ## Upgrade
 
