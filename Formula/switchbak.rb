@@ -2,8 +2,8 @@
 class Switchbak < Formula
   desc "Carry AI coding agent sessions to switchback"
   homepage "https://switchbak.dev"
-  url "https://github.com/switchbackai/homebrew-tap/releases/download/v0.1.17/switchbak-0.1.17.zip"
-  sha256 "ab8ba705494787d9f52a74bc71ecf606ebe6494f748af64a508bfcfa1f04d97c"
+  url "https://github.com/switchbackai/homebrew-tap/releases/download/v0.1.18/switchbak-0.1.18.zip"
+  sha256 "8ce5672eb4f292a7fbc7cc50efbc9b517810c287c1f407144ecb30c67716c958"
 
   depends_on arch: :arm64
   depends_on :macos
