@@ -2,8 +2,8 @@
 class Switchbak < Formula
   desc "Carry AI coding agent sessions to Switchbak"
   homepage "https://switchbak.dev"
-  url "https://github.com/switchbackai/homebrew-tap/releases/download/v0.1.26/switchbak-0.1.26.zip"
-  sha256 "6eb5dc4e423be08775a23d54cbfe5ed8489fde10528c2ba048bad94f252a42c6"
+  url "https://github.com/switchbackai/homebrew-tap/releases/download/v0.1.27/switchbak-0.1.27.zip"
+  sha256 "0db9739df20b6c2c2c845b184f80677a8af48031efb8c68cf6cf84439e472ba6"
 
   depends_on arch: :arm64
   depends_on :macos
@@ -22,7 +22,7 @@ class Switchbak < Formula
       (It signs you in with GitHub in your browser, then sets up the launch
       agents. `switchbak status` shows when your first session lands.)
       Before `brew uninstall switchbak`, run:
-        switchbak teardown
+        switchbak uninstall
     EOS
   end
 
